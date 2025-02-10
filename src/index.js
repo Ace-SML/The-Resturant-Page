@@ -1,5 +1,4 @@
-// index.js
 import { greeting } from "./greeting.js";
 
 console.log(greeting);
-alert("Hello");
+alert("All is Well!!!");
