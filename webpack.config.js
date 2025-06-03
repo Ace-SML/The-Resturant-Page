@@ -12,8 +12,14 @@ module.exports = {
   },
   devtool: "eval-source-map",
   devServer: {
-    watchFiles: ["./src/template.html"],
+  static: {
+    directory: path.resolve(__dirname, "dist"), // Serve files from dist
   },
+  watchFiles: ["./src/template.html", "./src/**/*.js"],
+  open: true, // Optional: opens in your browser automatically
+  hot: true,  // Optional: enables hot reloading
+},
+
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/template.html",
